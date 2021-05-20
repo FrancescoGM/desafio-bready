@@ -21,11 +21,11 @@ export const Content = styled.div`
   align-items: center;
 
   ul {
-    list-style: none;
     display: flex;
     gap: 2rem;
 
     li {
+      cursor: pointer;
       font-family: PT Sans, sans-serif;
       font-weight: bold;
       font-size: 1.125rem;

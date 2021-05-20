@@ -7,6 +7,7 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  background-color: ${props => props.theme.colors.white};
 `
 export const Content = styled.div`
   width: 100%;

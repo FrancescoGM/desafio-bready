@@ -16,6 +16,11 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  html, body, #__next {
+    width: 100vw;
+    overflow-X: hidden;
+  }
+
   body {
     background-color: ${props => props.theme.colors['white']};
     color: ${props => props.theme.colors['gray.700']};

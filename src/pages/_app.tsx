@@ -2,6 +2,12 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../styles/global'
 import { theme } from '../styles/theme'
+import 'swiper/swiper.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+
+import SwiperCore, { Navigation } from 'swiper/core'
+
+SwiperCore.use([Navigation])
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

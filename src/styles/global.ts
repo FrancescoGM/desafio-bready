@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
+  :root {
+    --swiper-theme-color: ${props => props.theme.colors['gray.700']};
+  }
+
   * {
     margin: 0;
     padding: 0;

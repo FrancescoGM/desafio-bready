@@ -10,6 +10,7 @@ import {
   ProductsContainer
 } from '../styles/pages/home'
 import { About } from '../components/About'
+import { Product } from '../components/Product'
 
 export default function Home() {
   return (
@@ -60,6 +61,7 @@ export default function Home() {
           </ProductsContainer>
         </Content>
         <About />
+        <Product />
         <Footer />
       </Container>
     </>

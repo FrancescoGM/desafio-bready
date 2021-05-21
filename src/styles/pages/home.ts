@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.main`
   width: 100vw;
-  margin-top: 80px;
+  margin: 80px 0 2rem;
 `
 
 export const Content = styled.section`
@@ -25,12 +25,10 @@ export const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  flex-wrap: wrap;
+  gap: 4rem;
 
   img {
-    min-width: 150px;
-    height: 150px;
     border-radius: 90px;
-    object-fit: cover;
   }
 `

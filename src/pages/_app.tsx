@@ -5,9 +5,9 @@ import { theme } from '../styles/theme'
 import 'swiper/swiper.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 
-import SwiperCore, { Navigation } from 'swiper/core'
+import SwiperCore, { Autoplay, Navigation } from 'swiper/core'
 
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Autoplay])
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

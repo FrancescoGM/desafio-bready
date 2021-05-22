@@ -11,6 +11,7 @@ import {
 } from '../styles/pages/home'
 import { About } from '../components/About'
 import { Product } from '../components/Product'
+import { Local } from '../components/Local'
 
 export default function Home() {
   return (
@@ -62,6 +63,7 @@ export default function Home() {
         </Content>
         <About />
         <Product />
+        <Local />
         <Footer />
       </Container>
     </>

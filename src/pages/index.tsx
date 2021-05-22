@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { RefObject, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../components/Footer'
@@ -14,13 +14,33 @@ import { Product } from '../components/Product'
 import { Local } from '../components/Local'
 
 export default function Home() {
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const productRef = useRef<HTMLDivElement>(null)
+  const localRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  function navigateTo(
+    ref: RefObject<HTMLDivElement>,
+    options?: ScrollIntoViewOptions
+  ) {
+    ref.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      ...options
+    })
+  }
+
   return (
     <>
       <Head>
         <title>Bready</title>
       </Head>
-      <Container>
-        <Header />
+      <Container ref={headerRef}>
+        <Header
+          onAbout={() => navigateTo(aboutRef)}
+          onProduct={() => navigateTo(productRef)}
+          onLocal={() => navigateTo(localRef)}
+        />
         <Banner />
         <Content>
           <ProductsContainer>
@@ -61,10 +81,15 @@ export default function Home() {
             />
           </ProductsContainer>
         </Content>
-        <About />
-        <Product />
-        <Local />
-        <Footer />
+        <About ref={aboutRef} />
+        <Product ref={productRef} />
+        <Local ref={localRef} />
+        <Footer
+          onInit={() => navigateTo(headerRef, { block: 'start' })}
+          onAbout={() => navigateTo(aboutRef)}
+          onProduct={() => navigateTo(productRef)}
+          onLocal={() => navigateTo(localRef)}
+        />
       </Container>
     </>
   )

@@ -1,24 +1,45 @@
-import React from 'react'
-import { Container, Content } from './styles'
-import { IoPersonCircle, IoSearchCircle, IoBag } from 'react-icons/io5'
+import React, { useState } from 'react'
+import { Container, Mobile, Web } from './styles'
+import { IoPersonCircle, IoSearchCircle, IoBag, IoMenu } from 'react-icons/io5'
 
-export function Header() {
+interface HeaderProps {
+  onAbout: () => void
+  onProduct: () => void
+  onLocal: () => void
+}
+
+export function Header({ onAbout, onLocal, onProduct }: HeaderProps) {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <Container>
-      <Content>
+      <Web>
         <img src="/logo.svg" alt="Bready" />
 
         <ul>
-          <li>Sobre nós</li>
-          <li>Produtos</li>
-          <li>Ambiente</li>
+          <li onClick={onAbout}>Sobre nós</li>
+          <li onClick={onProduct}>Produtos</li>
+          <li onClick={onLocal}>Ambiente</li>
         </ul>
-        <div>
+        <nav>
           <IoSearchCircle />
           <IoPersonCircle />
           <IoBag />
-        </div>
-      </Content>
+        </nav>
+      </Web>
+      <Mobile isOpen={isOpen}>
+        <img src="/logo.svg" alt="Bready" />
+
+        <button type="button" onClick={() => setIsOpen(!isOpen)}>
+          <IoMenu />
+        </button>
+
+        <ul>
+          <li onClick={onAbout}>Sobre nós</li>
+          <li onClick={onProduct}>Produtos</li>
+          <li onClick={onLocal}>Ambiente</li>
+        </ul>
+      </Mobile>
     </Container>
   )
 }

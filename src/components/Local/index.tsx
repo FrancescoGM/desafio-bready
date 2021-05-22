@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { forwardRef, ForwardRefRenderFunction } from 'react'
 import { Container, Content } from './styles'
 import { LocalCard } from '../LocalCard'
 
-export function Local() {
+const LocalRaw: ForwardRefRenderFunction<HTMLDivElement, unknown> = (
+  {},
+  ref
+) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <h2>@bready_oficial</h2>
         <div>
@@ -40,3 +43,5 @@ export function Local() {
     </Container>
   )
 }
+
+export const Local = forwardRef(LocalRaw)

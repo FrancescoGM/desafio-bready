@@ -2,7 +2,14 @@ import React, { FormEvent, useRef } from 'react'
 import { FaFacebookSquare, FaInstagramSquare } from 'react-icons/fa'
 import { Container, Content, SubmitButton } from './styles'
 
-export function Footer() {
+interface FooterProps {
+  onInit: () => void
+  onAbout: () => void
+  onProduct: () => void
+  onLocal: () => void
+}
+
+export function Footer({ onAbout, onInit, onLocal, onProduct }: FooterProps) {
   const inputRef = useRef<HTMLInputElement>(null)
 
   function handleSubmit(event: FormEvent) {
@@ -43,10 +50,10 @@ export function Footer() {
         <nav>
           <h3>Menu</h3>
           <ul>
-            <li>Início</li>
-            <li>Sobre nós</li>
-            <li>Produtos</li>
-            <li>Ambiente</li>
+            <li onClick={onInit}>Início</li>
+            <li onClick={onAbout}>Sobre nós</li>
+            <li onClick={onProduct}>Produtos</li>
+            <li onClick={onLocal}>Ambiente</li>
           </ul>
         </nav>
         <form onSubmit={handleSubmit}>

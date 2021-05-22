@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { forwardRef, ForwardRefRenderFunction } from 'react'
 import Image from 'next/image'
 import { Container, Content, Swiper, TextContainer } from './styles'
 import { SwiperSlide } from 'swiper/react'
 
-export function Product() {
+const ProductRaw: ForwardRefRenderFunction<HTMLDivElement, unknown> = (
+  {},
+  ref
+) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <Image
           src="https://images.unsplash.com/photo-1583338917451-face2751d8d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=620&q=80"
@@ -74,3 +77,5 @@ export function Product() {
     </Container>
   )
 }
+
+export const Product = forwardRef(ProductRaw)

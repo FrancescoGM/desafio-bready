@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { forwardRef, ForwardRefRenderFunction } from 'react'
 import { AboutCard } from '../AboutCard'
 import { AboutContainer, Container, Content, TextContainer } from './styles'
 
-export function About() {
+const AboutRaw: ForwardRefRenderFunction<HTMLDivElement, unknown> = (
+  {},
+  ref
+) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <TextContainer>
           <h4>Saiba mais sobre a bready</h4>
@@ -56,3 +59,5 @@ export function About() {
     </Container>
   )
 }
+
+export const About = forwardRef(AboutRaw)

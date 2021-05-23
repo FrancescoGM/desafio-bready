@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #__next {
-    width: 100vw;
+    width: 100%;
     overflow-X: hidden;
   }
 

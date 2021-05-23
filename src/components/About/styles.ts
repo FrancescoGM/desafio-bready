@@ -2,9 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   background-color: ${props => props.theme.colors['gray.50']};
-  width: 100vw;
+  width: 100%;
+
   height: 700px;
   padding: 8rem 1rem;
+
+  @media (max-width: 1120px) {
+    height: 100%;
+    padding: 3rem 1rem;
+  }
 `
 
 export const Content = styled.div`
@@ -14,10 +20,19 @@ export const Content = styled.div`
   display: flex;
 
   justify-content: space-between;
+
+  @media (max-width: 1120px) {
+    text-align: center;
+    flex-direction: column;
+  }
 `
 
 export const TextContainer = styled.div`
   max-width: 420px;
+
+  @media (max-width: 1120px) {
+    margin: 0 auto;
+  }
 
   h4 {
     font-size: 1.125rem;
@@ -36,6 +51,9 @@ export const TextContainer = styled.div`
   }
   img {
     margin-top: 7rem;
+    @media (max-width: 1120px) {
+      display: none;
+    }
   }
 `
 
@@ -43,6 +61,13 @@ export const AboutContainer = styled.div`
   gap: 8px;
   column-count: 2;
   column-gap: 10px;
+
+  @media (max-width: 1120px) {
+    display: flex;
+    flex-direction: column;
+
+    margin: 4rem auto 0;
+  }
 
   > div:nth-child(1) {
     break-inside: avoid;
@@ -54,5 +79,12 @@ export const AboutContainer = styled.div`
   > div:nth-child(3) {
     margin-top: 3rem;
     break-inside: avoid;
+  }
+  > div:nth-child(1),
+  > div:nth-child(2),
+  > div:nth-child(3) {
+    @media (max-width: 1120px) {
+      margin: 1rem 0;
+    }
   }
 `

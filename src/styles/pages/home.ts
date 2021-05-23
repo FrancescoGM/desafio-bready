@@ -18,6 +18,10 @@ export const Banner = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 650px) {
+    height: 400px;
+  }
 `
 
 export const ProductsContainer = styled.div`
@@ -27,6 +31,13 @@ export const ProductsContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
+
+  @media (max-width: 650px) {
+    row-gap: 2rem;
+    img {
+      width: 100px;
+    }
+  }
 
   img {
     border-radius: 90px;

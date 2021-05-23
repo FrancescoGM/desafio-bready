@@ -4,12 +4,17 @@ export const Container = styled.header`
   width: 100%;
 
   position: fixed;
-  z-index: 1;
+  z-index: 10;
+
   top: 0;
   left: 0;
   right: 0;
 
   background-color: ${props => props.theme.colors.white};
+
+  li {
+    cursor: pointer;
+  }
 `
 
 interface MobileProps {

@@ -62,4 +62,6 @@ export const TextContainer = styled.div`
 export const Swiper = styled(SwiperReact)`
   max-height: 240px;
   max-width: 400px;
+  /* z-index: 1; */
+  /* position: relative; */
 `

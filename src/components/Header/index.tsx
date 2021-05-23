@@ -11,15 +11,20 @@ interface HeaderProps {
 export function Header({ onAbout, onLocal, onProduct }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
 
+  function onNavigate(fn: () => void) {
+    setIsOpen(false)
+    fn()
+  }
+
   return (
     <Container>
       <Web>
         <img src="/logo.svg" alt="Bready" />
 
         <ul>
-          <li onClick={onAbout}>Sobre nós</li>
-          <li onClick={onProduct}>Produtos</li>
-          <li onClick={onLocal}>Ambiente</li>
+          <li onClick={() => onNavigate(onAbout)}>Sobre nós</li>
+          <li onClick={() => onNavigate(onProduct)}>Produtos</li>
+          <li onClick={() => onNavigate(onLocal)}>Ambiente</li>
         </ul>
         <nav>
           <IoSearchCircle />
@@ -35,9 +40,9 @@ export function Header({ onAbout, onLocal, onProduct }: HeaderProps) {
         </button>
 
         <ul>
-          <li onClick={onAbout}>Sobre nós</li>
-          <li onClick={onProduct}>Produtos</li>
-          <li onClick={onLocal}>Ambiente</li>
+          <li onClick={() => onNavigate(onAbout)}>Sobre nós</li>
+          <li onClick={() => onNavigate(onProduct)}>Produtos</li>
+          <li onClick={() => onNavigate(onLocal)}>Ambiente</li>
         </ul>
       </Mobile>
     </Container>

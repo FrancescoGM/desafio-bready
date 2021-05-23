@@ -7,16 +7,27 @@ export const Container = styled.section`
   padding: 4rem 1rem;
 
   background-color: ${props => props.theme.colors['gray.50']};
+
+  @media (max-width: 1120px) {
+    margin-top: 0;
+  }
 `
 
 export const Content = styled.div`
   max-width: 1120px;
-  max-height: 400px;
+  min-height: 400px;
   margin: 0 auto;
 
   display: flex;
 
   align-items: center;
+
+  @media (max-width: 1120px) {
+    flex-direction: column;
+    > div:nth-child(1) {
+      display: none !important;
+    }
+  }
 `
 
 export const TextContainer = styled.div`
@@ -29,6 +40,12 @@ export const TextContainer = styled.div`
   flex-direction: column;
 
   justify-content: space-between;
+
+  @media (max-width: 1120px) {
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
   h4 {
     font-size: 1.125rem;
     font-weight: 400;
@@ -56,11 +73,15 @@ export const TextContainer = styled.div`
     font-family: PT Sans, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
+    @media (max-width: 1120px) {
+      margin: 0 auto;
+    }
   }
 `
 
 export const Swiper = styled(SwiperReact)`
   max-height: 240px;
+  min-height: 240px;
   max-width: 400px;
   /* z-index: 1; */
   /* position: relative; */

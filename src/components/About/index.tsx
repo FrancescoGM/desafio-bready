@@ -9,7 +9,7 @@ const AboutRaw: ForwardRefRenderFunction<HTMLDivElement, unknown> = (
   return (
     <Container ref={ref}>
       <Content>
-        <TextContainer>
+        <TextContainer data-aos="fade-up">
           <h4>Saiba mais sobre a bready</h4>
           <h2>Alimentando sua barriga com alegria</h2>
           <p>

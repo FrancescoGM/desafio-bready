@@ -16,8 +16,9 @@ const ProductRaw: ForwardRefRenderFunction<HTMLDivElement, unknown> = (
           width="310"
           height="400"
           objectFit="cover"
+          data-aos="fade-up"
         />
-        <TextContainer>
+        <TextContainer data-aos="fade-up">
           <h4>Conheça mais sobre nossos produtos</h4>
           <h2>Infinitas variedades para todos os gostos</h2>
           <p>

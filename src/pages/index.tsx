@@ -41,9 +41,9 @@ export default function Home() {
           onProduct={() => navigateTo(productRef)}
           onLocal={() => navigateTo(localRef)}
         />
-        <Banner />
+        <Banner data-aos="fade-up" />
         <Content>
-          <ProductsContainer>
+          <ProductsContainer data-aos="fade-up">
             <Image
               src="https://images.unsplash.com/photo-1589661329742-713c46926e34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
               alt="Pão caseiro"

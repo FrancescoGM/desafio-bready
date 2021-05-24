@@ -32,12 +32,19 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 1120px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
   }
 
   nav {
+    max-width: 200px;
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -54,7 +61,8 @@ export const Content = styled.div`
 
   form {
     div {
-      width: 390px;
+      width: 100%;
+      max-width: 390px;
       margin-top: 2.3rem;
       border-bottom: 2px solid ${props => props.theme.colors['gray.700']};
       display: flex;
@@ -77,6 +85,11 @@ export const Content = styled.div`
 
   div {
     text-align: right;
+
+    @media (max-width: 1120px) {
+      text-align: left;
+    }
+
     ul {
       margin-top: 8px;
       li {

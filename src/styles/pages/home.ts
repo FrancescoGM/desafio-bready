@@ -38,7 +38,9 @@ export const ProductsContainer = styled.div`
       width: 100px;
     }
   }
-
+  @media only screen {
+    animation: animateUp 2s;
+  }
   img {
     border-radius: 90px;
   }

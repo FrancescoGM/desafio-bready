@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { HTMLAttributes, ReactNode } from 'react'
 import Image from 'next/image'
 import { Container, Content } from './styles'
 
-interface AboutCardProps {
+interface AboutCardProps extends HTMLAttributes<HTMLDivElement> {
   url: string
   title: string
   children: ReactNode
@@ -15,10 +15,11 @@ export function AboutCard({
   title,
   url,
   height,
-  width
+  width,
+  ...rest
 }: AboutCardProps) {
   return (
-    <Container>
+    <Container {...rest}>
       <Image src={url} alt={url} width={width} height={height} />
       <Content>
         <h3>{title}</h3>

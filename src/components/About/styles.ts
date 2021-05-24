@@ -33,7 +33,9 @@ export const TextContainer = styled.div`
   @media (max-width: 1120px) {
     margin: 0 auto;
   }
-
+  @media only screen and (height: 500px) {
+    animation: animateUp 2s;
+  }
   h4 {
     font-size: 1.125rem;
     font-weight: 400;
@@ -51,6 +53,23 @@ export const TextContainer = styled.div`
   }
   img {
     margin-top: 7rem;
+
+    animation: arrowAnimation 1.5s infinite;
+
+    @keyframes arrowAnimation {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+    }
+
     @media (max-width: 1120px) {
       display: none;
     }

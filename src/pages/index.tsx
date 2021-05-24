@@ -40,6 +40,10 @@ export default function Home() {
           onAbout={() => navigateTo(aboutRef)}
           onProduct={() => navigateTo(productRef)}
           onLocal={() => navigateTo(localRef)}
+          onInitMobile={() => navigateTo(headerRef, { block: 'start' })}
+          onAboutMobile={() => navigateTo(aboutRef, { block: 'start' })}
+          onProductMobile={() => navigateTo(productRef, { block: 'start' })}
+          onLocalMobile={() => navigateTo(localRef, { block: 'start' })}
         />
         <Banner data-aos="fade-up" />
         <Content>

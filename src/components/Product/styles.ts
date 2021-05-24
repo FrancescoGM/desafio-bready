@@ -61,8 +61,10 @@ export const TextContainer = styled.div`
     text-align: justify;
   }
   a {
-    width: 260px;
+    width: 100%;
+    max-width: 260px;
     height: 60px;
+
     border-radius: 4px;
     background-color: ${props => props.theme.colors['orange.100']};
 
@@ -74,15 +76,13 @@ export const TextContainer = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     @media (max-width: 1120px) {
-      margin: 0 auto;
+      margin: 1rem auto 0;
     }
   }
 `
 
 export const Swiper = styled(SwiperReact)`
   max-height: 240px;
-  min-height: 240px;
   max-width: 400px;
-  /* z-index: 1; */
-  /* position: relative; */
+  width: 100%;
 `

@@ -8,6 +8,7 @@ export const Container = styled.footer`
     text-align: center;
     margin-top: 4rem;
     font-size: 14px;
+    padding: 0 1rem;
   }
 
   header {
@@ -36,6 +37,13 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    > form,
+    > div,
+    > nav {
+      width: 100%;
+      max-width: 300px;
+    }
   }
 
   h3 {
@@ -44,7 +52,7 @@ export const Content = styled.div`
   }
 
   nav {
-    max-width: 200px;
+    max-width: 300px;
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -97,15 +105,15 @@ export const Content = styled.div`
         align-items: center;
 
         font-size: 1.125rem;
-        font-weight: 700;
+        font-weight: 500;
         & + li {
           margin-top: 4px;
         }
       }
     }
     svg {
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
     }
   }
 `

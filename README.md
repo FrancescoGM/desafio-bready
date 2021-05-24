@@ -5,9 +5,9 @@ Este site foi construído para uma vaga de emprego, baseado em um wireframe, cor
 
 # 👩‍💻 Experiência
 
-Em toda minha jornada como programador sempre construí plataformas, nunca tinha feito uma pagina de divulgação, então não digo que demorei, mas não foi rápido o processo para iniciar a fazer o design. Sobre o design, não sou nenhum expert mas sei me virar, então montei ele na plataforma Figma, sua versão web e mobile, alguns detalhes talvez estejam diferente do resultado, pois não tinha tempo para fazer ajustes e retoques, criei um design para ter o meu ponto de partida para criar a página. ![Link](https://www.figma.com/file/5jrD8fd7FMnxa5mon8MUOB/desafio-booky)
+Em toda minha jornada como programador sempre construí plataformas, nunca tinha feito uma pagina de divulgação, então não digo que demorei, mas não foi rápido o processo para iniciar a fazer o design. Sobre o design, não sou nenhum expert mas sei me virar, então montei ele na plataforma Figma, sua versão web e mobile, alguns detalhes talvez estejam diferente do resultado, pois não tinha tempo para fazer ajustes e retoques, criei um design para ter o meu ponto de partida para criar a página. [Link](https://www.figma.com/file/5jrD8fd7FMnxa5mon8MUOB/desafio-booky)
 
-Sobre o demais, nada a comentar, desenvolvi o que foi pedido, mas onde posso dizer que não gostei muito foi nos mínimos detalhes como animações, NUNCA mexi com isso, então não sabia o que fazer, mas adicionei algumas animações simples de fade-up em alguns componentes, mas algo bem simples mesmo. ![Link do site final](https://desafio-bready.vercel.app/)
+Sobre o demais, nada a comentar, desenvolvi o que foi pedido, mas onde posso dizer que não gostei muito foi nos mínimos detalhes como animações, NUNCA mexi com isso, então não sabia o que fazer, mas adicionei algumas animações simples de fade-up em alguns componentes, mas algo bem simples mesmo. [Link do site final](https://desafio-bready.vercel.app/)
 
 # 💻 Tecnologias utilizadas
 
